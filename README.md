@@ -18,7 +18,7 @@ $cmake --build .
 
 ## Usage
 ```
-$ ./main
+$ ./singleton.out
 ```
 
 ## Licence
