@@ -1,7 +1,7 @@
 
 /**
- *
- *
+ * @date 8th Sep. 2020
+ * Copyright (c) Yuji Iwanaga
  */
 
 #include "singleton.h"
