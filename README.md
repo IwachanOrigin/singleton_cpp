@@ -8,6 +8,9 @@ Simple implementation example of singleton pattern using cpp
 $ docker-compose build
 ```
 ```
+docker-compose run dev bash
+```
+```
 $ mkdir /singleton_dev/src/build
 $ cd /singleton_dev/src/build
 $ cmake ..
