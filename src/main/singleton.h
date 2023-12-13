@@ -1,32 +1,28 @@
 
-/**
- * @date 8th Sep. 2020
- * Copyright (c) Yuji Iwanaga
- */
-
-#ifndef SINGLETON_H
-#define SINGLETON_H
+#ifndef SINGLETON_H_
+#define SINGLETON_H_
 
 #include <string>
 
 class Singleton {
 
 public:
-    static Singleton &getInstance();
+  static Singleton& getInstance();
 
-    std::wstring getData() { return m_wstr; }
+  std::wstring getData() const { return m_wstr; }
 
 private:
-    // newで生成出来ないようにする
-    Singleton();
-    ~Singleton();
+  // newで生成出来ないようにする
+  explicit Singleton();
+  ~Singleton() = default;
 
-    // コピー出来ないようにする
-    explicit Singleton(const Singleton &);
-    // 代入出来ないようにする
-    Singleton &operator=(const Singleton &);
+  // コピー出来ないようにする
+  explicit Singleton(const Singleton &) = delete;
+  // 代入出来ないようにする
+  Singleton &operator=(const Singleton &) = delete;
 
-    std::wstring m_wstr;
+  std::wstring m_wstr;
 };
 
-#endif
+#endif // SINGLETON_H_
+
